@@ -21,18 +21,18 @@ const DashBoardBody = () => {
                     <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/dashboard/available-players`}>Available Players</Link>
                     {!contexts.admin ? (
                         <>
-                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/dashboard/myTeam`}>My Team</Link>
+                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/dashboard/my-players`}>My Players</Link>
                         </>) : (
                         <>
                             <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/dashboard/players`}>All Players</Link>
 
-                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/dashboard/allteams`}>View All Teams</Link>
+                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/dashboard/all-teams`}>View All Teams</Link>
 
 
-                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/dashboard/addplayer`}>Add Player</Link>
+                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/dashboard/add-player`}>Add Player</Link>
 
-                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/dashboard/makeAdmin`}>Make Admin</Link>
-                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/dashboard/register`}>Register Team</Link>
+                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/dashboard/make-admin`}>Make Admin</Link>
+                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/dashboard/register`}>Register User</Link>
                         </>)
                     }
                     {!contexts.user.email ? (

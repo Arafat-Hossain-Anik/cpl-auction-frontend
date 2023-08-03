@@ -14,11 +14,10 @@ const PlayersAnotherTable = (props) => {
             <td>{player.session}</td>
             <td>{player.category}</td>
             <td>{player.role}</td>
-            {/* <td>{player.details}</td> */}
             <td>{player.price}</td>
             <td>{player.soldPrice}</td>
             <td>
-                <Link className='btn btn-success' to={`/more/${player._id}`}>
+                <Link className='btn btn-success' to={`/player-details/${player._id}`}>
                     Details
                 </Link>
             </td>

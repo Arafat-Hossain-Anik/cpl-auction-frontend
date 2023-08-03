@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 import PlayersTable from '../Body/PlayersTable/PlayersTable';
 import axios from 'axios';
 import SearchPlayer from './SearchPlayer';
-const Manageplayer = () => {
+const ManagePlayer = () => {
     const [allPlayers, setAllPlayers] = useState([]);
     const [displayPlayers, setDisplayPlayers] = useState([]);
     useEffect(() => {
@@ -111,4 +111,4 @@ const Manageplayer = () => {
     );
 };
 
-export default Manageplayer;
+export default ManagePlayer;

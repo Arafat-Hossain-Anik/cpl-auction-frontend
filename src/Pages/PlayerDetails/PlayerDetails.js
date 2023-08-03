@@ -4,10 +4,10 @@ import { useParams } from 'react-router';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 // import useAuth from '../../hooks/useAuth';
-import './More.css'
+import './PlayerDetails.css'
 // import useAuth from '../../hooks/useAuth';
 
-const More = () => {
+const PlayerDetails = () => {
   const { id } = useParams();
   // const { contexts } = useAuth();
   // !contexts.admin ?
@@ -55,4 +55,4 @@ const More = () => {
 
 };
 
-export default More;
+export default PlayerDetails;

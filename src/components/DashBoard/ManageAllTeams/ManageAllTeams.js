@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row, Table } from 'react-bootstrap';
 import PlayersAnotherTable from '../Body/PlayersAnotherTable/PlayersAnotherTable';
 
-const ManageOrder = () => {
+const ManageAllTeams = () => {
     const [teams, setTeams] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/teams')
@@ -60,4 +60,4 @@ const ManageOrder = () => {
     );
 };
 
-export default ManageOrder;
+export default ManageAllTeams;

@@ -7,17 +7,17 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
-import More from './Pages/More/More';
+import PlayerDetails from './Pages/PlayerDetails/PlayerDetails';
 import AuthProvider from './context/AuthProvider';
 import AddPlayers from './components/AddPlayersToDB/AddPlayers';
 import DashBoardBody from './components/DashBoard/Body/DashBoardBody';
 import Login from './Pages/Login/Login';
 import SignUpPage from './Pages/SignUpPage/SignUpPage';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import MyBooking from './Pages/MyOrder/MyBooking';
+import MySelectedPlayers from './Pages/MySelectedPlayers/MySelectedPlayers';
 import AdminRoute from './components/AdminRoute/AdminRoute';
-import ManageOrder from './components/DashBoard/ManageOrder/ManageOrder';
-import ManageProduct from './components/DashBoard/ManageProduct/ManageProduct';
+import ManageAllTeams from './components/DashBoard/ManageAllTeams/ManageAllTeams';
+import ManagePlayer from './components/DashBoard/ManagePlayer/ManagePlayer';
 import MakeAdmin from './components/DashBoard/MakeAdmin/MakeAdmin';
 import AvailablePlayers from './components/DashBoard/AvailablePlayers/AvailablePlayers';
 function App() {
@@ -54,37 +54,36 @@ function App() {
                 </div>
               }>
               </Route>
-              <Route path="/dashboard/myTeam" element={<MyBooking />}>
+              <Route path="/dashboard/my-players" element={<MySelectedPlayers />}>
               </Route>
               <Route path="/dashboard/available-players" element={<AvailablePlayers query={query} />}>
               </Route>
-              <Route path="/dashboard/addplayer" element={
+              <Route path="/dashboard/add-player" element={
                 <AdminRoute>
                   <AddPlayers />
                 </AdminRoute>}>
               </Route>
-
               <Route path="/dashboard/register" element={
                 <AdminRoute>
                   <SignUpPage />
                 </AdminRoute>}>
               </Route>
 
-              <Route path={`/dashboard/allteams`} element={<AdminRoute>
-                <ManageOrder />
+              <Route path={`/dashboard/all-teams`} element={<AdminRoute>
+                <ManageAllTeams />
               </AdminRoute>}>
               </Route>
               <Route path={`/dashboard/players`} element={<AdminRoute>
-                <ManageProduct setQuery={setQuery} />
+                <ManagePlayer setQuery={setQuery} />
               </AdminRoute>}>
               </Route>
-              <Route path={`/dashboard/makeAdmin`} element={<AdminRoute>
+              <Route path={`/dashboard/make-admin`} element={<AdminRoute>
                 <MakeAdmin />
               </AdminRoute>}>
               </Route>
             </Route>
-            <Route path='/more/:id' element={<PrivateRoute>
-              <More />
+            <Route path='/player-details/:id' element={<PrivateRoute>
+              <PlayerDetails />
             </PrivateRoute>}>
             </Route>
             <Route path='/login' element={<Login />}>
