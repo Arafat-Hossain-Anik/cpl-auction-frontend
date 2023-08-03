@@ -1,0 +1,48 @@
+.footer-area {
+    /* margin-top: 100px;*/
+    padding: 20px 0;
+    background-color: #008080;
+}
+
+.single-footer h4 {
+    text-transform: capitalize;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    color: white;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.single-footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.single-footer ul li {
+    margin-bottom: 10px;
+}
+
+.single-footer ul li a {
+    color: white;
+    text-transform: capitalize;
+    text-decoration: navajowhite;
+}
+
+.copy {
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 35px;
+}

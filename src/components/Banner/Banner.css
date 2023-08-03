@@ -1,0 +1,76 @@
+/* cover image body */
+.cover-body {
+    height: 100vh;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/banner/cpl-cover.avif");
+    /* Set a specific height */
+    height: 100%;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
+.hero-image-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.vecteezy.com/system/resources/previews/000/427/012/original/cricket-stadium-vector.jpg");
+    /* Set a specific height */
+    height: 100%;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
+
+/* Place text in the left side of the image */
+.hero-text {
+    position: absolute;
+    top: 30%;
+    left: 29%;
+    /* transform: translate(-50%, -50%); */
+    color: white;
+}
+
+/* cover header font size */
+.cover-header {
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .hero-text {
+        top: 30%;
+        left: 15%;
+    }
+
+    .cover-header {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .hero-text {
+        top: 30%;
+        left: 10%;
+    }
+
+    .cover-header {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-text {
+        top: 30%;
+        left: 5%;
+    }
+
+    .cover-header {
+        font-size: 25px;
+    }
+}
