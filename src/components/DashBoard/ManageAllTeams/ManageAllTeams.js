@@ -5,7 +5,7 @@ import PlayersAnotherTable from '../Body/PlayersAnotherTable/PlayersAnotherTable
 const ManageAllTeams = () => {
     const [teams, setTeams] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/teams')
+        fetch('https://cpl-backend.onrender.com/teams')
             .then(res => res.json())
             .then(data => setTeams(data))
     }, [])

@@ -7,7 +7,7 @@ import PlayersAnotherTable from '../Body/PlayersAnotherTable/PlayersAnotherTable
 const AvailablePlayers = () => {
     const [query, setQuery] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/public-query`)
+        fetch(`https://cpl-backend.onrender.com/public-query`)
             .then(res => res.json())
             .then(data => {
                 setQuery(data);
@@ -16,7 +16,7 @@ const AvailablePlayers = () => {
     // console.log("query", query);
     const category = query?.category;
     const role = query?.role;
-    const url = `http://localhost:5000/players-cat-rol/${category}/${role}`;
+    const url = `https://cpl-backend.onrender.com/players-cat-rol/${category}/${role}`;
     const [availablePlayer, setAvailablePlayer] = useState([]);
     useEffect(() => {
         fetch(url)

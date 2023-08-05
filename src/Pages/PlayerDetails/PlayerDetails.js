@@ -15,7 +15,7 @@ const PlayerDetails = () => {
   // const {booking} = useAuth();
   const [player, setPlayer] = useState({})
   useEffect(() => {
-    fetch(`http://localhost:5000/players/${id}`)
+    fetch(`https://cpl-backend.onrender.com/players/${id}`)
       .then(res => res.json())
       .then(data => setPlayer(data))
   }, [id])

@@ -19,7 +19,7 @@ const SignUpPage = () => {
             managerName
         }
         createEmailPasswordUser(name, email, password);
-        axios.post('http://localhost:5000/teams', teamDetails)
+        axios.post('https://cpl-backend.onrender.com/teams', teamDetails)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully');

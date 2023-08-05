@@ -9,7 +9,7 @@ const AddPlayers = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         // console.log(data);
-        axios.post('http://localhost:5000/player', data)
+        axios.post('https://cpl-backend.onrender.com/player', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully');
@@ -34,7 +34,7 @@ const AddPlayers = () => {
             const workbook = XLSX.read(data, { type: 'array' });
             const jsonData = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);
             try {
-                await axios.post('http://localhost:5000/api/upload', { data: jsonData });
+                await axios.post('https://cpl-backend.onrender.com/api/upload', { data: jsonData });
                 alert('Data uploaded successfully');
             } catch (error) {
                 console.error(error);

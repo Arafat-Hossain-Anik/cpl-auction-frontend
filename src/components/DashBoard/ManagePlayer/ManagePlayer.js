@@ -7,7 +7,7 @@ const ManagePlayer = () => {
     const [allPlayers, setAllPlayers] = useState([]);
     const [displayPlayers, setDisplayPlayers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/players')
+        fetch('https://cpl-backend.onrender.com/players')
             .then(result => result.json())
             .then(data => {
                 setAllPlayers(data);
@@ -24,7 +24,7 @@ const ManagePlayer = () => {
             category: category.toUpperCase(),
             role: role.toUpperCase()
         }
-        axios.put('http://localhost:5000/public-query', data)
+        axios.put('https://cpl-backend.onrender.com/public-query', data)
             .then(res => {
                 if (res.data) {
                     alert("Data Is Now Showing to public");

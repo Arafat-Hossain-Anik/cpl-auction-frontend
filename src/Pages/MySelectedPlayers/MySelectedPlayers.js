@@ -13,7 +13,7 @@ const MySelectedPlayers = () => {
   const { user } = useFirebase();
   // const mail = 'csit.cpl@pstu.cpl.com';
   // ${user.email}
-  const url = `http://localhost:5000/teams/${user.email}`;
+  const url = `https://cpl-backend.onrender.com/teams/${user.email}`;
   useEffect(() => {
     fetch(url)
       .then(res => res.json())

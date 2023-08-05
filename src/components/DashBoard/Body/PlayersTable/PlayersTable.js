@@ -9,7 +9,7 @@ const PlayersTable = (props) => {
         const playerDetails = { ...player, soldPrice };
         const playerData = { playerDetails, teamName };
         setAllPlayers(allPlayers.filter(singlePlayer => singlePlayer !== player));
-        fetch('http://localhost:5000/confirm-player', {
+        fetch('https://cpl-backend.onrender.com/confirm-player', {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(playerData)
@@ -20,7 +20,7 @@ const PlayersTable = (props) => {
                     alert("Player is Bought")
                 }
             })
-        fetch('http://localhost:5000/players-bought', {
+        fetch('https://cpl-backend.onrender.com/players-bought', {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(player)
@@ -34,7 +34,7 @@ const PlayersTable = (props) => {
     }
     const [teams, setTeams] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/teams')
+        fetch('https://cpl-backend.onrender.com/teams')
             .then(result => result.json())
             .then(data => {
                 setTeams(data);
