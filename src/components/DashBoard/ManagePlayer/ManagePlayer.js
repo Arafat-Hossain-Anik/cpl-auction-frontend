@@ -104,7 +104,9 @@ const ManagePlayer = () => {
                         </tbody>
                     </Table>
                     :
-                    <div> <h1 className='text-danger text-center'>No player Found</h1></div>
+                    <div>
+                        <h1 className='text-danger text-center' style={{ marginBottom: "100px" }}>No player Found</h1>
+                    </div>
                 }
             </>
         </div >

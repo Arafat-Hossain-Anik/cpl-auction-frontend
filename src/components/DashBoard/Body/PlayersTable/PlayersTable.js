@@ -1,15 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 const PlayersTable = (props) => {
     const { player, allPlayers, setAllPlayers } = props;
     const teamRef = useRef();
     const soldRef = useRef();
     const handleConfirm = (e) => {
-        //e.preventDefault();
         const teamName = teamRef.current.value;
         const soldPrice = soldRef.current.value;
         const playerDetails = { ...player, soldPrice };
         const playerData = { playerDetails, teamName };
-        // delete single item from ui
         setAllPlayers(allPlayers.filter(singlePlayer => singlePlayer !== player));
         fetch('http://localhost:5000/confirm-player', {
             method: "PUT",
@@ -29,11 +27,20 @@ const PlayersTable = (props) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 // window.location = window.location.href;
             })
 
     }
+    const [teams, setTeams] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/teams')
+            .then(result => result.json())
+            .then(data => {
+                setTeams(data);
+            })
+    }, []);
+    // console.log(teams?.name);
     return (<>
         {
             player.status === "bought" ? null : <tr>
@@ -46,11 +53,14 @@ const PlayersTable = (props) => {
                 {/* <td>{player.details}</td> */}
                 <td>
                     <select ref={teamRef} className="input-field" type="text" placeholder="Select Category" required>
-                        <option value="CSIT">CSIT</option>
+                        {
+                            teams.map(team => <option key={team.name} value={team.name}>{team.name}</option>)
+                        }
+                        {/* <option value="CSIT">CSIT</option>
                         <option value="CCE">CCE</option>
                         <option value="MATH">MATH</option>
                         <option value="PHYSICS">PHYSICS</option>
-                        <option value="EEE">EEE</option>
+                        <option value="EEE">EEE</option> */}
                     </select>
                 </td>
                 <td>

@@ -48,7 +48,7 @@ const useFirebase = () => {
             }
             setLoading(false)
         })
-    }, [auth]);
+    }, []);
 
 
     useEffect(() => {

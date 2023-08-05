@@ -4,7 +4,7 @@ const SearchPlayer = (props) => {
     const { allPlayers, setDisplayPlayers } = props;
     const searchRef = useRef('');
     const searchTextRef = useRef('');
-    console.log(allPlayers);
+    // console.log(allPlayers);
     const handleSearch = () => {
         const searchOption = searchRef.current.value;
         const searchText = searchTextRef.current.value;

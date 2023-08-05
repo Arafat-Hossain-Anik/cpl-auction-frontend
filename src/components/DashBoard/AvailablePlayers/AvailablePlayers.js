@@ -13,7 +13,7 @@ const AvailablePlayers = () => {
                 setQuery(data);
             });
     }, []);
-    console.log("query", query);
+    // console.log("query", query);
     const category = query?.category;
     const role = query?.role;
     const url = `http://localhost:5000/players-cat-rol/${category}/${role}`;
@@ -25,7 +25,7 @@ const AvailablePlayers = () => {
                 setAvailablePlayer(data);
             });
     }, [url]);
-    console.log(url)
+    // console.log(url)
     return (
         <div className='container'>
             {
@@ -58,7 +58,7 @@ const AvailablePlayers = () => {
                         </tbody>
                     </Table>
                 </div> : <div>
-                    <h1 className='text-center my-5 text-danger'>No Players Is Available Right Now</h1>
+                    <h1 className='text-center my-5 text-danger'>Players Are Not Available Right Now</h1>
                     <div style={{ height: "40vh" }}>
 
                     </div>

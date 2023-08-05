@@ -19,7 +19,7 @@ const MySelectedPlayers = () => {
       .then(res => res.json())
       .then(data => setTeam(data))
   }, [url])
-  console.log(team);
+  // console.log(team);
   ///---------------------------pdf creation from databased data
   const handleDownload = async () => {
     // Create a new PDF document

@@ -18,22 +18,11 @@ const SignUpPage = () => {
             email,
             managerName
         }
-        // console.log(teamDetails);
-        // console.log(data);
-        const userDetails = {
-            name,
-            email
-        }
         createEmailPasswordUser(name, email, password);
         axios.post('http://localhost:5000/teams', teamDetails)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully');
-                }
-            })
-        axios.post('http://localhost:5000/users', userDetails)
-            .then(res => {
-                if (res.data.insertedId) {
                 }
             })
         reset();

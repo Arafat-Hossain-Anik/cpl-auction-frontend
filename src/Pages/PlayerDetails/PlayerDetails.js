@@ -19,7 +19,7 @@ const PlayerDetails = () => {
       .then(res => res.json())
       .then(data => setPlayer(data))
   }, [id])
-  console.log(player);
+  // console.log(player);
   return (
     <div>
       <Header></Header>

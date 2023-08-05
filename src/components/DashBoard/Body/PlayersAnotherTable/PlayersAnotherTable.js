@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const PlayersAnotherTable = (props) => {
     const { player } = props;
     // const handleDetails = () => {
-    console.log(player);
+    // console.log(player);
     return (
         <tr>
             <td>

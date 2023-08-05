@@ -8,7 +8,7 @@ import './AddPlayers.css';
 const AddPlayers = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        // console.log(data);
         axios.post('http://localhost:5000/player', data)
             .then(res => {
                 if (res.data.insertedId) {
